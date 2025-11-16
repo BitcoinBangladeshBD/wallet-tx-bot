@@ -1,16 +1,18 @@
-# Wallet Transaction Alert Bot
+# wallet-tx-bot
 
-## Features
-- Collects wallets sent to @wantedeth
-- Monitors ETH, BSC, Polygon, Base transactions
-- Sends alerts to user + channel @Transactionchecker
-- Deployable on Vercel
+Telegram wallet scanner + automatic transaction alert system.
 
-## Deployment
-1. Push code to GitHub
-2. Import repo to Vercel
-3. Set Environment Variables:
-   - BOT_TOKEN
-   - CHAT_ID
-   - CHANNEL_ID
-4. Deploy and set webhook:
+- Webhook: `/api/webhook` — add new wallets by sending/forwarding to your bot
+- Checker: `/api/checker` — runs every 5 minutes and sends alerts when tx count increases
+- Uses Vercel KV for storage
+
+## Environment variables (set on Vercel)
+- BOT_TOKEN
+- CHAT_ID
+- CHANNEL_ID
+
+## Deploy
+1. Push repo to GitHub
+2. Import to Vercel
+3. Set env vars
+4. Set Telegram webhook: https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<YOUR_VERCEL_URL>/api/webhook
