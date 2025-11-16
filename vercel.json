@@ -1,6 +1,13 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/index.js" }
+    { "src": "/api/webhook", "dest": "api/webhook.js" },
+    { "src": "/api/checker", "dest": "api/checker.js" }
+  ],
+  "crons": [
+    {
+      "path": "/api/checker",
+      "schedule": "*/5 * * * *"
+    }
   ]
 }
