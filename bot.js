@@ -8,7 +8,7 @@ const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
 const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: true });
 
 // Channels
-const WATCH_CHANNEL_ID = 892636707; // @WantedBitcoin
+const WATCH_CHANNEL_ID = @wantedeth; // @WantedBitcoin
 const ALERT_CHANNEL = '@Transactionchecker';
 
 // JSON file
