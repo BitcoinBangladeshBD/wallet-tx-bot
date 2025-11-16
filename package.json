@@ -1,10 +1,14 @@
 {
   "name": "wallet-tx-bot",
   "version": "1.0.0",
+  "description": "Telegram wallet transaction checker bot",
   "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
-    "axios": "^1.6.0",
-    "node-html-parser": "^7.0.1",
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12",
     "node-telegram-bot-api": "^0.61.0",
     "fs-extra": "^11.1.1"
   }
